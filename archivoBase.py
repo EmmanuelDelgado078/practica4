@@ -3,8 +3,9 @@ class archivoBase(object):
 
     def __init__(self, name):
         self.name = name
-
-    def carga():
+    
+    ''' funcion que nos va a ayudar a recuperar todo lo que hay dentro del archivo'''
+    def carga(cadena):
         try:
             archivo = open(self.name + ".txt","a")
             r = []
@@ -16,21 +17,18 @@ class archivoBase(object):
             return(r)
         except IOError:
             print("archivo no encontrado")
+            return -1
             
 
         ##print(type(r))
         ##archivo.write("\n" + input())
 
-    '''Aqui vamos a poner la escritura sobre el fichero de un objeto de tipo
-    base de datos, tambien vamos a tener que recuperar toda la base de datos
-    de el fichero'''
-
-    def recuperaArchivo(self, Base_de_Datos):
-        pass
-
         '''funcion que nos hace imprimir en un fichero:
-        accedemos a los atributos del objeto base de datos y los vamos escribiendo
+        accedemos a los atributos de la lista y los vamos escribiendo
         dentro de nuestro archivo txt mediante open() y despues debemos de con write()
         '''
         def escribeArchivo(lista):
-            pass
+            for i in lista:
+                archivo = open(self.name, "w")
+                archivo.write("\n" + i)
+            archivo.close()
