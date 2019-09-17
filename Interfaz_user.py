@@ -45,10 +45,11 @@ def menu_cargar():
 	print("Por favor, introduce el NOMBRE del archivo que deseas cargar\n")
 	z = input()
 	if not cargar(z):
+		print("nombre incorrecto")
 		aux_cargar()
 	else:
 		menu_principal()
-	
+
 
 def checar_opcion(z):
 	if z == 1:

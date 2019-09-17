@@ -3,4 +3,3 @@ class Base_de_Datos(object):
 	def __init__(self, arg):
 		super(Base de Datos, self).__init__()
 		self.arg = arg
-		
