@@ -108,37 +108,16 @@ def buscar_menu():
 
 
 def menu_principal():
-	print("Por favor elige una opción:\n")
+	print("Por favor elige una opcion:\n")
 	print("1. Buscar en la base de datos")
 	print("2. Eliminar registro")
 	print("3. Modificar registro")
-	print("4. Insertar registro")
-	print("5. Guardar Base de datos")
-	print("6. Regresar al menú anterior")
-	print("7. Salir")
-	c = int(input())
-	if c == 1:
-		buscar_menu()
-	elif c == 2:
-		eliminar_menu()
-	elif c == 3:
-		modificar_menu()
-	elif c == 4:
-		insertar_menu()
-	elif c == 5:
-		guardar_menu()
-	elif c == 6:
-		main_aux_1()
-	elif c == 7:
-		sys.exit()
-	else:
-		print("POr favor ingresa una opción válida\n")
-		menu_principal()
+	print("4. Guardar Base de datos")
+	print("5. Regresar al menu anterior")
+	print("6. Salir")
 
 def menu_crear():
-	print("Por favor ingresa el NOMBRE para la base de datos\n")
-	name = input()
-	print("Por favor ingresa el NÚMERO de columnas que deseas\n\n")
+	print("Por favor ingresa el NUMERO de columnas que deseas\n\n")
 	x = int(input())
 	nombres = []
 	k = 1
@@ -156,10 +135,10 @@ def crear(lista, name, x):
 	base = Base_de_Datos(nombres, [])
 
 def aux_cargar():
-	print("\n\nEscribe el NÚMERO que corresponda a una opción\n")
+	print("\n\nEscribe el NUMERO que corresponda a una opcion\n")
 	print("1. Volver a intentarlo\n")
 	print("2. Crear base de datos\n")
-	print("3. Regresar al menú anterior\n")
+	print("3. Regresar al menu anterior\n")
 	print("4. Salir\n")
 	y = int(input())
 	if y == 1:
@@ -171,7 +150,7 @@ def aux_cargar():
 	elif y == 4:
 		sys.exit()
 	else:
-		print("Por favor ingresa un número válido")
+		print("Por favor ingresa un numero valido")
 		aux_cargar()
 
 def menu_cargar():
@@ -203,11 +182,11 @@ def checar_opcion_1(z):
 	elif z == 3:
 		sys.exit()
 	else:
-		print("Por favor ingresa un número válido")
+		print("Por favor ingresa un numero valido")
 		main_aux_1()
 
 def main_aux_1():
-	print("Por favor ingresa el número que corresponda a la función que quieres utilizar\n\n")
+	print("Por favor ingresa el numero que corresponda a la funcion que quieres utilizar\n\n")
 	print("1. Crear una nueva base de datos\n")
 	print("2. Cargar base de datos\n")
 	print("3. Salir\n")
@@ -215,7 +194,7 @@ def main_aux_1():
 	checar_opcion_1(z)
 
 def main():
-	print("\n¡Bienvenido al programa para manejar bases de datos!")
+	print("\nBienvenido al programa para manejar bases de datos")
 	main_aux_1()
 
 if __name__ == "__main__":
