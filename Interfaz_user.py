@@ -194,7 +194,6 @@ def cargar(name):
 		sort(lista_1)
 		base = Base_de_Datos(lista[0], lista_1)
 		return lista_1
-	
 
 def checar_opcion_1(z):
 	if z == 1:

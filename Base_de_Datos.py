@@ -42,3 +42,7 @@ class Base_de_Datos(object):
 			print("La columna ingresada no existe")
 			return -1
 		
+	"""docstring for Base de Datos"""
+	def __init__(self, arg):
+		super(Base de Datos, self).__init__()
+		self.arg = arg
