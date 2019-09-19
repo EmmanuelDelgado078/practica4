@@ -1,7 +1,9 @@
+import sys
+
 def guardar_menu():
 	guarda = archivoBase()
 	guarda.escribeArchivo(base.lista)
-	print("Base de datos guardada con éxito")
+	print("Base de datos guardada con exito")
 	menu_principal()
 
 def insertar_menu():
@@ -9,23 +11,23 @@ def insertar_menu():
 	r = input()
 	j = base.insertar_registro(r)
 	if j :
-		print("Registro insertado con éxito\n")
+		print("Registro insertado con exito\n")
 		menu_principal()
 	else:
-		print("Ocuriió un error al insertar el registro: \n")
+		print("Ocurio un error al insertar el registro: \n")
 
 def insertar_menu_aux():
-	print("Elige una opción: \n")
-		print("1. Volver a insertar \n")
-		print("2. Salir\n")
-		p = int(input())
-		if p == 1:
-			insertar_menu()
-		elif p == 2:
-			menu_principal()
-		else:
-			print("Por favor ingresa una opción válida")
-			insertar_menu_aux()
+	print("Elige una opcion: \n")
+	print("1. Volver a insertar \n")
+	print("2. Salir\n")
+	p = int(input())
+	if p == 1:
+		insertar_menu()
+	elif p == 2:
+		menu_principal()
+	else:
+		print("Por favor ingresa una opcion valida")
+		insertar_menu_aux()
 
 def modificar_menu():
 	print("Ingresa el registro que quieres modificar\n")
@@ -36,21 +38,21 @@ def modificar_menu():
 	if h == -1:
 		modificar_menu_aux()
 	else: 
-		print("Elemento modificado con éxito\n")
+		print("Elemento modificado con exito\n")
 		menu_principal()
 
 def modificar_menu_aux():
-	print("Elige una opción: \n")
-		print("1. Volver a modificar \n")
-		print("2. Salir\n")
-		p = int(input())
-		if p == 1:
-			modificar_menu()
-		elif p == 2:
-			menu_principal()
-		else:
-			print("Por favor ingresa una opción válida")
-			modificar_menu_aux()
+	print("Elige una opcion: \n")
+	print("1. Volver a modificar \n")
+	print("2. Salir\n")
+	p = int(input())
+	if p == 1:
+		modificar_menu()
+	elif p == 2:
+		menu_principal()
+	else:
+		print("Por favor ingresa una opcion valida")
+		modificar_menu_aux()
 
 def eliminar_menu():
 	print("Por favor escribe el registro para eliminar: \n")
@@ -59,34 +61,34 @@ def eliminar_menu():
 	if h == -1:
 		buscar_menu_aux()
 	else: 
-		print("Elemento eliminado con éxito\n")
+		print("Elemento eliminado con exito\n")
 		menu_principal()
 
 def eliminar_menu_aux():
-	print("Elige una opción: \n")
-		print("1. Volver a eliminar \n")
-		print("2. Salir\n")
-		p = int(input())
-		if p == 1:
-			eliminar_menu()
-		elif p == 2:
-			menu_principal()
-		else:
-			print("Por favor ingresa una opción válida")
-			eliminar_menu_aux()
+	print("Elige una opcion: \n")
+	print("1. Volver a eliminar \n")
+	print("2. Salir\n")
+	p = int(input())
+	if p == 1:
+		eliminar_menu()
+	elif p == 2:
+		menu_principal()
+	else:
+		print("Por favor ingresa una opcion valida")
+		eliminar_menu_aux()
 
 def buscar_menu_aux():
-	print("Elige una opción: \n")
-		print("1. Volver a buscar \n")
-		print("2. Salir\n")
-		p = int(input())
-		if p == 1:
-			buscar_menu()
-		elif p == 2:
-			menu_principal()
-		else:
-			print("Por favor ingresa una opción válida")
-			buscar_menu_aux()
+	print("Elige una opcion: \n")
+	print("1. Volver a buscar \n")
+	print("2. Salir\n")
+	p = int(input())
+	if p == 1:
+		buscar_menu()
+	elif p == 2:
+		menu_principal()
+	else:
+		print("Por favor ingresa una opcion valida")
+		buscar_menu_aux()
 
 def buscar_menu():
 	print("Por favor escribe una columna para buscar: \n")
@@ -122,13 +124,15 @@ def menu_crear():
 	nombres = []
 	k = 1
 	while x > 0:
+		str(k)
 		print("Por favor ingresa el NOMBRE de la columna " + k + "\n\n")
 		y = input()
 		nombres.append(y)
 		x -= 1
+		k = int(k)
 		k += 1
 	crear(nombres, name, x)
-	print("¡Base de datos creada con éxito!\n")
+	print("Base de datos creada con exito\n")
 	menu_principal()
 
 def crear(lista, name, x):
@@ -158,7 +162,7 @@ def menu_cargar():
 	z = input()
 	lista = cargar(z)
 	if lista:
-		print("¡Base de datos cargada con éxito!\n")
+		print("Base de datos cargada con exito\n")
 		menu_principal()
 	else:
 		aux_cargar()

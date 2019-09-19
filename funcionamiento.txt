@@ -1,0 +1,12 @@
+funcionamiento del programa.   
+
+despues de haber descargado la carpeta con el codigo, debes de correr el comando
+python Interfaz_user.py en la terminal y posicionado dentro de la carpeta practica4
+
+despues se desplegara el menú y podras interactuar con el programa.
+
+
+Integrantes:
+
+Delgado Aboytes Emmanuel 
+García Rosas Dicter Tadeo 
